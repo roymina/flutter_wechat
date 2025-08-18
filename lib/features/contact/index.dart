@@ -12,6 +12,7 @@ class _ContactIndexPageState extends State<ContactIndexPage> {
   @override
   Widget build(BuildContext context) {
     return BaseScaffold(
+      title: '通讯录',
       currentIndex: 1,
       body: Container(
         color: Colors.white,

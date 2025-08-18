@@ -12,6 +12,7 @@ class _MyIndexPageState extends State<MyIndexPage> {
   @override
   Widget build(BuildContext context) {
     return BaseScaffold(
+      title: '我',
       currentIndex: 3,
       body: Container(
         color: Colors.white,

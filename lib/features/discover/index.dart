@@ -12,6 +12,7 @@ class _DiscoverIndexPageState extends State<DiscoverIndexPage> {
   @override
   Widget build(BuildContext context) {
     return BaseScaffold(
+      title: '发现',
       currentIndex: 2,
       body: Container(
         color: Colors.white,

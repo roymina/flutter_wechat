@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:flutter_wechat/routes.dart';
 
 class BottomNavbar extends StatefulWidget {
@@ -37,6 +38,30 @@ class _BottomNavbarState extends State<BottomNavbar> {
     Navigator.pushReplacementNamed(context, route);
   }
 
+  BottomNavigationBarItem _buildItem(
+    String icon,
+    String activeIcon,
+    String label,
+  ) {
+    return BottomNavigationBarItem(
+      icon: SvgPicture.asset(
+        icon,
+        colorFilter: ColorFilter.mode(
+          Theme.of(context).disabledColor,
+          BlendMode.srcIn,
+        ),
+      ),
+      activeIcon: SvgPicture.asset(
+        activeIcon,
+        colorFilter: ColorFilter.mode(
+          Theme.of(context).primaryColor,
+          BlendMode.srcIn,
+        ),
+      ),
+      label: label,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
@@ -47,26 +72,26 @@ class _BottomNavbarState extends State<BottomNavbar> {
       selectedItemColor: Theme.of(context).primaryColor,
       unselectedItemColor: Theme.of(context).disabledColor,
       onTap: _onTap,
-      items: const [
-        BottomNavigationBarItem(
-          icon: Icon(Icons.message_outlined),
-          activeIcon: Icon(Icons.message),
-          label: '微信',
+      items: [
+        _buildItem(
+          'assets/icons/icons_outlined_chats.svg',
+          'assets/icons/icons_filled_chats.svg',
+          '微信',
         ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.contacts_outlined),
-          activeIcon: Icon(Icons.contacts),
-          label: '通讯录',
+        _buildItem(
+          'assets/icons/icons_outlined_contacts.svg',
+          'assets/icons/icons_filled_contacts.svg',
+          '通讯录',
         ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.compass_calibration_outlined),
-          activeIcon: Icon(Icons.compass_calibration),
-          label: '发现',
+        _buildItem(
+          'assets/icons/icons_outlined_discover.svg',
+          'assets/icons/icons_filled_discover.svg',
+          '发现',
         ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.person_outline),
-          activeIcon: Icon(Icons.person),
-          label: '我',
+        _buildItem(
+          'assets/icons/icons_outlined_me.svg',
+          'assets/icons/icons_filled_me.svg',
+          '我',
         ),
       ],
     );
