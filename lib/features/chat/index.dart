@@ -3,14 +3,14 @@ import 'package:flutter_wechat/routes.dart';
 import 'package:flutter_wechat/shared/widgets/base_scaffold.dart';
 import 'package:flutter_wechat/shared/widgets/top_appbar.dart';
 
-class MessageIndexPage extends StatefulWidget {
-  const MessageIndexPage({super.key});
+class ChatIndexPage extends StatefulWidget {
+  const ChatIndexPage({super.key});
 
   @override
-  State<MessageIndexPage> createState() => _MessageIndexPageState();
+  State<ChatIndexPage> createState() => _ChatIndexPageState();
 }
 
-class _MessageIndexPageState extends State<MessageIndexPage> {
+class _ChatIndexPageState extends State<ChatIndexPage> {
   @override
   Widget build(BuildContext context) {
     return BaseScaffold(
@@ -30,6 +30,7 @@ class _MessageIndexPageState extends State<MessageIndexPage> {
                   Navigator.pushNamed(context, AppRoutes.search);
                 },
                 child: Container(
+                  height: 36.0,
                   padding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
                   decoration: BoxDecoration(
                     color: Theme.of(context).cardColor,

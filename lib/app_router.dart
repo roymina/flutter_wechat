@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_wechat/features/contact/index.dart';
 import 'package:flutter_wechat/features/discover/index.dart';
 import 'package:flutter_wechat/features/exceptions/not_found.dart';
-import 'package:flutter_wechat/features/message/index.dart';
+import 'package:flutter_wechat/features/chat/index.dart';
 import 'package:flutter_wechat/features/my/index.dart';
 import 'package:flutter_wechat/routes.dart';
 import 'package:flutter_wechat/shared/pages/search_page.dart';
@@ -10,8 +10,8 @@ import 'package:flutter_wechat/shared/pages/search_page.dart';
 class AppRouter {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
-      case AppRoutes.message:
-        return MaterialPageRoute(builder: (_) => const MessageIndexPage());
+      case AppRoutes.chat:
+        return MaterialPageRoute(builder: (_) => const ChatIndexPage());
       case AppRoutes.contact:
         return MaterialPageRoute(builder: (_) => const ContactIndexPage());
       case AppRoutes.discover:

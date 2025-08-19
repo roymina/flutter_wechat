@@ -33,7 +33,6 @@ class TopAppbar extends StatelessWidget implements PreferredSizeWidget {
           IconButton(
             icon: rightButtonIcon!,
             onPressed: onRightButtonPressed?.call,
-            color: Theme.of(context).iconTheme.color,
           ),
       ],
     );

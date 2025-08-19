@@ -20,7 +20,7 @@ class _BottomNavbarState extends State<BottomNavbar> {
     String route;
     switch (index) {
       case 0:
-        route = AppRoutes.message;
+        route = AppRoutes.chat;
         break;
       case 1:
         route = AppRoutes.contact;
